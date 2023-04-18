@@ -7,19 +7,7 @@ import { ExecutionTimeService } from './service/execution-time.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'interceptor';
-
-  constructor(public serviceTime: ExecutionTimeService) {
-  }
-
-  ngOnInit(): void {
-    console.log("service appelé");
-    this.serviceTime.getTime();   
-  }
-
-  time() {
-    this.serviceTime.getTime();
-  }
 
 }
